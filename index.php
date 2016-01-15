@@ -1,0 +1,3 @@
+<?PHP
+
+echo "Hellow World";
