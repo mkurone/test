@@ -6,6 +6,10 @@ php:
   - 5.5
   - hhvm
 
+env:
+  global:
+    - secure: "iztzM77If41szu6QyFw0mt3prjWeUioD5ti1Y+yeqBbu25LkOpWVqoTnmJLJUW+kqnuiaz+QesrGxW5AB9qs0Cy0PBtqgBOVfISNSvf9BV7baKkaJ/5tsDnBgwSuXEGbNd52GVl/61m+x7PnB/CIyC30b4W/+4OYa4KRv4zXrKcjHVaLyLexa6TRx2kCxmVbyhIliuitShYShqoLKtIbg8daiBWB1B5J9g4MLFcDTw9oUpGu7I7ClAQOxb7cxCZV7VnOndCp+MhiC5kwzTLtnCoJUIXHW6gKdFNTGB2HFJzI5d9cHs65JNGabmd8IBLWY7/5Dq8kl4WeUxK2iXgblBUDR+hzkj/nlmDErd5khx9D/rlLep45r/m/NwtyIjkA6nzK/veNFg5TjnjS3zXVRC28CGHcxnn58yIratoe8FmZ6o5eiZwtxmRTigj/U4wmxg7gFp1XAUefhF4bwZdrAO8ukpZFX7TslJ3mcKheTHSy9W0Rwud6URtnSCwmTW0mCa/06HCcIUTokVekPF45oqwNg+7q/OclvF6IHuMCt8OJMup9kjZQAn8XXyojMA8pkiyByTIA+jIhp/Z7BUBQ/uYJLJh2WkesUkjna+ja6Ze8C13OuuyYBeBsD9W+q+gquypwGnGVkGJOFPxDMSEmCUXJ9tG6/Edk+mC2grly+gE="
+
 before_script:
   - curl -s http://getcomposer.org/installer | php
   - php composer.phar install --dev --prefer-source
@@ -13,10 +17,6 @@ before_script:
 script:
   - mkdir -p build/logs
   - phpunit --coverage-clover build/logs/clover.xml --configuration tests/phpunit.xml tests
-
-env:
-  global:
-    secure: "iztzM77If41szu6QyFw0mt3prjWeUioD5ti1Y+yeqBbu25LkOpWVqoTnmJLJUW+kqnuiaz+QesrGxW5AB9qs0Cy0PBtqgBOVfISNSvf9BV7baKkaJ/5tsDnBgwSuXEGbNd52GVl/61m+x7PnB/CIyC30b4W/+4OYa4KRv4zXrKcjHVaLyLexa6TRx2kCxmVbyhIliuitShYShqoLKtIbg8daiBWB1B5J9g4MLFcDTw9oUpGu7I7ClAQOxb7cxCZV7VnOndCp+MhiC5kwzTLtnCoJUIXHW6gKdFNTGB2HFJzI5d9cHs65JNGabmd8IBLWY7/5Dq8kl4WeUxK2iXgblBUDR+hzkj/nlmDErd5khx9D/rlLep45r/m/NwtyIjkA6nzK/veNFg5TjnjS3zXVRC28CGHcxnn58yIratoe8FmZ6o5eiZwtxmRTigj/U4wmxg7gFp1XAUefhF4bwZdrAO8ukpZFX7TslJ3mcKheTHSy9W0Rwud6URtnSCwmTW0mCa/06HCcIUTokVekPF45oqwNg+7q/OclvF6IHuMCt8OJMup9kjZQAn8XXyojMA8pkiyByTIA+jIhp/Z7BUBQ/uYJLJh2WkesUkjna+ja6Ze8C13OuuyYBeBsD9W+q+gquypwGnGVkGJOFPxDMSEmCUXJ9tG6/Edk+mC2grly+gE="
 
 after_script:
   - php vendor/bin/coveralls -v
