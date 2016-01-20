@@ -14,7 +14,8 @@ before_script:
   - php composer.phar install --dev --no-interaction
 script:
   - mkdir -p build/logs
-  - php vendor/bin/phpunit -c phpunit.xml.dist
+  - phpunit --coverage-clover build/logs/clover.xml --configuration tests/phpunit.xml tests
+
 after_success:
   - travis_retry php vendor/bin/coveralls -v
 
