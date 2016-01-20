@@ -13,14 +13,11 @@ env:
 before_script:
   - curl -s http://getcomposer.org/installer | php
   - sudo apt-get install -qq gawk
-  - curl https://raw.github.com/gist/5624363 > coveralls.sh 2> /dev/null
   - php composer.phar install --dev --prefer-source
 
 script:
   - mkdir -p build/logs
   - phpunit --coverage-clover build/logs/clover.xml --configuration tests/phpunit.xml tests
 
-after_success:
-  - bash coveralls.sh -s xxx.c,yyy.c -g .libs
 after_script:
   - php vendor/bin/coveralls -v
