@@ -6,5 +6,5 @@
   - [![Code Coverage](https://scrutinizer-ci.com/g/mkurone/test/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/mkurone/test/?branch=master)
   - [![Build Status](https://scrutinizer-ci.com/g/mkurone/test/badges/build.png?b=master)](https://scrutinizer-ci.com/g/mkurone/test/build-status/master)
 - Coveralls
-  - [![Coverage Status](https://coveralls.io/repos/mkurone/test/badge.png?branch=master)](https://coveralls.io/r/mkurone/test?branch=master)
+  - [![Coverage Status](https://coveralls.io/repos/github/mkurone/test/badge.svg?branch=master)](https://coveralls.io/github/mkurone/test?branch=master)
  
