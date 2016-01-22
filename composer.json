@@ -1,5 +1,8 @@
 {
     "require-dev": {
         "satooshi/php-coveralls": "dev-master"
-    }
+    },
+    "require-dev": { 
+        "phpdocumentor/phpdocumentor": "2.*" 
+    } 
 }
