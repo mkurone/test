@@ -10,8 +10,10 @@ matrix:
 before_script:
   - curl -s http://getcomposer.org/installer | php
   - php composer.phar install --dev --no-interaction
+  - pear install --alldeps phpdocumentor
 script:
   - pear -V
+  - phpdoc -h
   - git diff HEAD^
   - mkdir -p build/logs
   - phpunit --coverage-clover build/logs/clover.xml --configuration tests/phpunit.xml tests
