@@ -12,6 +12,7 @@
 - SqlTimeLog.php
   - 下記コマンドを実行してSQLログから必要なデータをまとめておく
   ```
-  cut -f2,3 ./pash/to/*.clog >> /path/to/filename
+  cut -f2,3 /pash/to/*.clog >> /path/to/filename
   ```
+  - $filenameに出力したファイルを設定
  
