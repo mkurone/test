@@ -7,4 +7,11 @@
   - [![Build Status](https://scrutinizer-ci.com/g/mkurone/test/badges/build.png?b=master)](https://scrutinizer-ci.com/g/mkurone/test/build-status/master)
 - Coveralls
   - [![Coverage Status](https://coveralls.io/repos/github/mkurone/test/badge.svg?branch=master)](https://coveralls.io/github/mkurone/test?branch=master)
+
+###事前準備
+- SqlTimeLog.php
+  - 下記コマンドを実行してSQLログから必要なデータをまとめておく
+  ```
+  cut -f2,3 ./pash/to/*.clog >> /path/to/filename
+  ```
  
