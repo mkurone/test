@@ -14,7 +14,7 @@ before_script:
 script:
   - pear -V
   - phpdoc -h
-  - find . -type f -name *.php | xargs -n1 php -l 
+  - find . -type f -name *.php | xargs -n1 php -l
   - git diff HEAD^
   - mkdir -p build/logs
   - phpunit --coverage-clover build/logs/clover.xml --configuration tests/phpunit.xml tests
